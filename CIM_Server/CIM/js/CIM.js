@@ -49,7 +49,7 @@ CIM.readSpecies=function(speciesName,callback) {
         // Request data from the server
         var req = new XMLHttpRequest();
         req.overrideMimeType("application/json");
-        var path = "/CIM/"+encodeURIComponent(speciesName)+".json";
+        var path = "/CIM/"+encodeURI(speciesName)+".json";
         req.open('GET', path, true); 
         req.onreadystatechange = function () {
             if (req.readyState == 4) {
